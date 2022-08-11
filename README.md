@@ -1,0 +1,3 @@
+# Pokedex
+
+Tryna learn Swift.
