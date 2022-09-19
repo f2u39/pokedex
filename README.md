@@ -7,7 +7,7 @@ Tryna learn Swift.
 - Sep 19, 2022 🟢Restart
 
 ## Memo
-### Turn developer mode
+### Turn on developer mode
 ``` ios
 Settings > Privacy & Security > Developer Mode
 ```
