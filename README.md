@@ -5,3 +5,19 @@ Tryna learn Swift.
 ## Status
 - Sep 6, 2022 🔴Stopped
 - Sep 19, 2022 🟢Restart
+
+## Memo
+### Turn developer mode
+``` ios
+Settings > Privacy & Security > Developer Mode
+```
+
+### Signing for "gRPC-C++-gRPCCertificates-Cpp" requires a development team. Select a development team in the Signing & Capabilities editor
+``` xcode
+Pods > gRPC-C++-gRPCCertificates-Cpp > Team
+```
+
+### Untrusted Developer: Your device management settings do not allow using apps from developer
+``` ios
+Settings > General > VPN & Device Management
+```

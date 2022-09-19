@@ -12,21 +12,21 @@ struct PokemonEditView: View {
     
     @State private var type1 = ""
     @State private var type2 = ""
-    @State private var evoId = ""
-    @State private var devoId = ""
+    @State private var evoId = "0"
+    @State private var devoId = "0"
     
     var body: some View {
         VStack {
-            TextField("タイプ1(半角英字)", text: $type1)
+            TextField("Type1", text: $type1)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 300)
-            TextField("タイプ2(半角英字)", text: $type2)
+            TextField("Type2", text: $type2)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 300)
-            TextField("↑ポケモンID(半角数字)", text: $devoId)
+            TextField("↑EvoId", text: $devoId)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 300)
-            TextField("↓ポケモンID(半角数字)", text: $evoId)
+            TextField("↓DevoId", text: $evoId)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 300)
             Button(action: {
@@ -37,11 +37,11 @@ struct PokemonEditView: View {
                                         name: pokemon.name,
                                         type1: self.type1,
                                         type2: self.type2,
-                                        devoId: self.devoId,
-                                        evoId: self.evoId,
+                                        devoId: Int(self.devoId) ?? 0,
+                                        evoId: Int(self.evoId) ?? 0,
                                         imgUrl: pokemon.imgUrl))
             }) {
-                Text("保存")
+                Text("Save")
                     .frame(width: 300)
             }
             .padding()

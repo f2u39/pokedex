@@ -23,12 +23,12 @@ class PokemonViewModel: ObservableObject {
 
           self.pokemons = documents.map { queryDocumentSnapshot -> Pokemon in
             let data = queryDocumentSnapshot.data()
-            let id = data["id"] as? String ?? ""
+            let id = data["id"] as? Int ?? 0
             let name = data["name"] as? String ?? ""
             let type1 = data["type1"] as? String ?? ""
             let type2 = data["type2"] as? String ?? ""
-            let devoId = data["devoId"] as? String ?? ""
-            let evoId = data["evoId"] as? String ?? ""
+            let devoId = data["devoId"] as? Int ?? 0
+            let evoId = data["evoId"] as? Int ?? 0
             let imgUrl = data["imgUrl"] as? String ?? ""
 
             return Pokemon(

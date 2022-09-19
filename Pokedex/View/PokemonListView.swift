@@ -22,7 +22,7 @@ struct PokemonListView: View {
             .onAppear() {
                 self.viewModel.fetchData()
             }
-            .navigationBarTitle("ポケモン", displayMode: .inline)
+            .navigationBarTitle("PokeDex", displayMode: .inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {

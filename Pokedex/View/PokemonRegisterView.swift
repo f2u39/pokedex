@@ -6,7 +6,7 @@ struct PokemonRegisterView: View {
     @State private var image = UIImage()
     @State private var isShowPhotoLibrary = false
     
-    @State private var id = ""
+    @State private var id = "0"
     @State private var name = ""
     
     let storage = Storage.storage()
@@ -22,24 +22,24 @@ struct PokemonRegisterView: View {
                         .scaledToFill()
                         .frame(width: 300, height: 300)
                         .border(Color.pink, width: 2)
-                    Text("Plz select a picture...")
+                    Text("Select a picture...")
                 }
                 .sheet(isPresented: $isShowPhotoLibrary, content: {
                     ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image)
                 })
             }
-            TextField("ID(半角数字)", text: $id)
+            TextField("ID", text: $id)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 300)
-            TextField("名前(カタカナ)", text: $name)
+            TextField("Name", text: $name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .frame(width: 300)
             Button(action: {
                 // Upload profile image
                 let fbUtil = FirebaseUtil()
-                fbUtil.register(id: id.description, name: name.description, image: image)
+                fbUtil.register(id: Int(id) ?? 0, name: name.description, image: image)
             }) {
-                Text("登録")
+                Text("Save")
                     .frame(width: 300)
             }
             .padding()

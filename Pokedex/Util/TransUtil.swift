@@ -8,6 +8,10 @@
 import Foundation
 
 func fillId(id: String) -> String {
+    if id.count == 0 {
+        return ""
+    }
+    
     if Int(id)! < 10 {
         return "00" + id
     } else if (Int(id)! < 100) {

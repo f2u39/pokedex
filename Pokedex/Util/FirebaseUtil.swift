@@ -52,7 +52,7 @@ final class FirebaseUtil: ObservableObject {
 //            "evoId": p.evoId
 //        ])
         
-        let ref = Firestore.firestore().collection("pokemon").document(p.id)
+        let ref = Firestore.firestore().collection("pokemon").document(String(p.id))
         ref.updateData([
             "type1": p.type1,
             "type2": p.type2,
@@ -78,12 +78,12 @@ final class FirebaseUtil: ObservableObject {
             }
 
             guard let snapshot = snapshot, let data = snapshot.data() else { return }
-            let id = data["id"] as? String ?? ""
+            let id = data["id"] as? Int ?? 0
             let name = data["name"] as? String ?? ""
             let type1 = data["type1"] as? String ?? ""
             let type2 = data["type2"] as? String ?? ""
-            let devoId = data["devoId"] as? String ?? ""
-            let evoId = data["evoId"] as? String ?? ""
+            let devoId = data["devoId"] as? Int ?? 0
+            let evoId = data["evoId"] as? Int ?? 0
             let imgUrl = data["imgUrl"] as? String ?? ""
             pokemon = Pokemon(
                 id: id, name: name, type1: type1, type2: type2, devoId: devoId, evoId: evoId, imgUrl: imgUrl)
@@ -91,7 +91,7 @@ final class FirebaseUtil: ObservableObject {
         return pokemon
     }
     
-    func register(id: String, name: String, image: UIImage) {
+    func register(id: Int, name: String, image: UIImage) {
         // Create a storage reference
         let storageRef = storage.reference().child("images/pokemon").child("\(id).jpg")
         guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
@@ -107,19 +107,19 @@ final class FirebaseUtil: ObservableObject {
         // Upload the image
         storageRef.putData(uploadImage, metadata: nil, completion: { (metadata, err) in
             if err != nil {
-                print("storageRef.putData failed...")
+                print(err!)
                 return
             }
             
             storageRef.downloadURL { (url, err) in
                 if err != nil {
-                    print("get downloadURL failed...")
+                    print(err!)
                     return
                 }
                 
                 guard let imgUrl = url?.absoluteString else { return }
                 let pokeData = [
-                    "id": id,
+                    "id": 0,
                     "name": name,
                     "type1": "",
                     "type2": "",
@@ -128,10 +128,10 @@ final class FirebaseUtil: ObservableObject {
                     "imgUrl": imgUrl] as [String : Any]
                 
                 // Insert pokemon info
-                Firestore.firestore().collection("pokemon").document(id).setData(pokeData) {
+                Firestore.firestore().collection("pokemon").document(String(id)).setData(pokeData) {
                     (err) in
                     if let err = err {
-                        print("Firestoreへの保存に失敗しました。\(err)")
+                        print("Save failed: \(err)")
                         return
                     }
                 }

@@ -11,11 +11,11 @@ import Firebase
 // var pokemons: Array<Pokemon> = []
 
 struct Pokemon {
-    var id: String
+    var id: Int
     var name: String
     var type1: String
     var type2: String
-    var devoId: String
-    var evoId: String
+    var devoId: Int
+    var evoId: Int
     var imgUrl: String
 }
