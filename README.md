@@ -3,4 +3,5 @@
 Tryna learn Swift.
 
 ## Status
-❌Stopped
+- Sep 6, 2022 🔴Stopped
+- Sep 19, 2022 🟢Restart
