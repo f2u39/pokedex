@@ -13,6 +13,7 @@ struct PokemonListView: View {
     // @State var pokemons = [Pokemon]()
     
     var body: some View {
+        
         NavigationView {
             List(viewModel.pokemons, id: \.id) { poke in
                 NavigationLink(destination: PokemonDetailView(pokemon: poke)) {
@@ -26,6 +27,9 @@ struct PokemonListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
+                        NavigationLink(destination: ContentView()) {
+                            Text("DI")
+                        }
                         NavigationLink(destination: PokemonRegisterView()) {
                             Text("Register")
                         }
