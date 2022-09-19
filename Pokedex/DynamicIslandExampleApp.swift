@@ -11,26 +11,26 @@ import SwiftUI
 @main
 struct DynamicIslandExampleApp: App {
     var body: some Scene {
-        WindowGroup {
-            if #available(iOS 15.0, *) {
-                ContentView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .overlay(alignment: .top) {
-                        GeometryReader { proxy in
-                            let size = proxy.size
-                            NotificationView(size: size)
-                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            WindowGroup {
+                if #available(iOS 15.0, *) {
+                    ContentView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .overlay(alignment: .top) {
+                            GeometryReader { proxy in
+                                let size = proxy.size
+                                NotificationView(size: size)
+                                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                            }
+                            .ignoresSafeArea()
                         }
-                        .ignoresSafeArea()
-                    }
-            } else {
-                // Fallback on earlier versions
+                } else {
+                    // Fallback on earlier versions
+                }
             }
         }
-    }
 }
 
-struct NotificationModel {
-    var title: String
-    var content: String
+struct DiPokemon {
+    var number: String
+    var name: String
 }

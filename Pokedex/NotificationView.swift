@@ -10,15 +10,26 @@ import SwiftUI
 struct NotificationView: View {
     var size: CGSize
     @State var isExpanded: Bool = false
-    @State var notification: NotificationModel?
+    @State var diPokemon: DiPokemon?
+    
     var body: some View {
         if #available(iOS 15.0, *) {
             HStack {
                 // any view for notify
-                Text("🇳🇿New Zealand")
+//                Text("🇳🇿New Zealand")
+//                    .font(.largeTitle)
+//                    .frame(width: 200)
+//                    .foregroundColor(.purple)
+                
+//                Text(notification?.title ?? "")
+//                    .font(.largeTitle)
+                Image(diPokemon?.number ?? "")
+                    .resizable()
+                    .frame(width: 80, height: 80)
+                
+                Text(diPokemon?.name ?? "")
                     .font(.largeTitle)
-                    .frame(width: 300)
-                    .foregroundColor(.purple)
+                    .foregroundColor(.green)
             }
             
             .frame(width: isExpanded ? size.width - 22 : 126, height: isExpanded ? 120 : 37.33)
@@ -32,15 +43,15 @@ struct NotificationView: View {
             .clipped()
             .offset(y: 11)
             .onReceive(NotificationCenter.default.publisher(for: .init("NOTIFY"))) { output in
-                guard let notification = output.object as? NotificationModel else { return }
-                self.notification = notification
+                guard let diPokemon = output.object as? DiPokemon else { return }
+                self.diPokemon = diPokemon
                 withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.7, blendDuration: 0.7)) {
                     isExpanded = true
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
                         withAnimation(.interactiveSpring(response: 0.7, dampingFraction: 0.7, blendDuration: 0.7)) {
                             isExpanded = false
-                            self.notification = nil
+                            self.diPokemon = nil
                         }
                     }
                 }
