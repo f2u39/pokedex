@@ -4413,7 +4413,6 @@
 		E9238585281503A699E7FD3A12729A18 /* frame_data.h in Headers */ = {isa = PBXBuildFile; fileRef = C3FAD7897EED34DD7AB4EF65E24C7DC9 /* frame_data.h */; };
 		E925B03B8AD9F10FA14B70278E997877 /* alts_security_connector.h in Copy src/core/lib/security/security_connector/alts Private Headers */ = {isa = PBXBuildFile; fileRef = CC3A4CC30855633F8DAD87624FD2DAF8 /* alts_security_connector.h */; };
 		E926A91FAE9F03753DF27167C58D61E2 /* mpscq.cc in Sources */ = {isa = PBXBuildFile; fileRef = 38A3BD05CC79CC898C0DAB81256DAFEF /* mpscq.cc */; settings = {COMPILER_FLAGS = "-DGRPC_ARES=0 -Wno-comma -DGRPC_SHADOW_BORINGSSL_SYMBOLS -fno-objc-arc"; }; };
-		E92AD2DEBE19F0C761B31FF2573E3B32 /* roots.pem in Resources */ = {isa = PBXBuildFile; fileRef = 7DBCD3CE424BE440BE26847DD6FD23C6 /* roots.pem */; };
 		E93C13331AC30806C97C108D45D2D9C4 /* core_codegen_interface.h in Copy impl/codegen Public Headers */ = {isa = PBXBuildFile; fileRef = BB1F21BECF8AF0ECDFC8D999CEB842E6 /* core_codegen_interface.h */; };
 		E949981247966B00B07955B20B7EF19E /* time.h in Headers */ = {isa = PBXBuildFile; fileRef = 12ABFC821A9F0CF77C3981092C3A0068 /* time.h */; };
 		E980499D6C4F5B48F1737B501FB92091 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2D3833A7B5E748EC107825E96E2CBC /* LinkedList.swift */; };
@@ -20414,7 +20413,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E92AD2DEBE19F0C761B31FF2573E3B32 /* roots.pem in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

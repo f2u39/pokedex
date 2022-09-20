@@ -14,6 +14,12 @@ struct PokemonDetailView: View {
     init(pokemon: Pokemon) {
         self.pokemon = pokemon
         self.viewModel = PokemonDetailViewModel(pokemon: pokemon)
+        
+        NotificationCenter.default.post(
+            name: .init("NOTIFY"),
+            object: DiPokemon(
+                number: "001",
+                name: "フシギダネ"))
     }
     
     var body: some View {

@@ -27,7 +27,7 @@ struct PokemonListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     HStack {
-                        NavigationLink(destination: ContentView()) {
+                        NavigationLink(destination: DIView()) {
                             Text("DI")
                         }
                         NavigationLink(destination: PokemonRegisterView()) {

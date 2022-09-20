@@ -25,7 +25,7 @@ struct NotificationView: View {
 //                    .font(.largeTitle)
                 Image(diPokemon?.number ?? "")
                     .resizable()
-                    .frame(width: 80, height: 80)
+                    .frame(width: 120, height: 120)
                 
                 Text(diPokemon?.name ?? "")
                     .font(.largeTitle)
