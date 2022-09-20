@@ -9,16 +9,19 @@ Tryna learn Swift.
 ## Memo
 ### Turn on developer mode
 ``` ios
+# iPhone
 Settings > Privacy & Security > Developer Mode
 ```
 
 ### Signing for "gRPC-C++-gRPCCertificates-Cpp" requires a development team. Select a development team in the Signing & Capabilities editor
 ``` xcode
+# Xcode
 Pods > gRPC-C++-gRPCCertificates-Cpp > Team
 ```
 
 ### Untrusted Developer: Your device management settings do not allow using apps from developer
 ``` ios
+# iPhone
 Settings > General > VPN & Device Management
 ```
 
