@@ -35,7 +35,8 @@
 		D77B7B782709E98C00775D38 /* PokemonApiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B7B772709E98C00775D38 /* PokemonApiView.swift */; };
 		D77B7B7A2709E9A900775D38 /* PokemonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B7B792709E9A900775D38 /* PokemonApi.swift */; };
 		D796305A26FBF7DE007C014A /* FirebaseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D796305926FBF7DE007C014A /* FirebaseUtil.swift */; };
-		D7C3A50A28D9E6B50046D8B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3A50928D9E6B50046D8B0 /* ContentView.swift */; };
+		D7C3A50C28D9E7C20046D8B0 /* Pokedex in Resources */ = {isa = PBXBuildFile; fileRef = D7C3A50B28D9E7C20046D8B0 /* Pokedex */; };
+		D7C3A50E28D9E8010046D8B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C3A50D28D9E8000046D8B0 /* ContentView.swift */; };
 		D7D19AF327049839008C4259 /* PokemonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D19AF227049839008C4259 /* PokemonDetailViewModel.swift */; };
 		D7F9F7D728A53290005DBFE9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F9F7D628A5328F005DBFE9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -96,7 +97,8 @@
 		D77B7B772709E98C00775D38 /* PokemonApiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApiView.swift; sourceTree = "<group>"; };
 		D77B7B792709E9A900775D38 /* PokemonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonApi.swift; sourceTree = "<group>"; };
 		D796305926FBF7DE007C014A /* FirebaseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUtil.swift; sourceTree = "<group>"; };
-		D7C3A50928D9E6B50046D8B0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../.Trash/ContentView.swift; sourceTree = "<group>"; };
+		D7C3A50B28D9E7C20046D8B0 /* Pokedex */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pokedex; sourceTree = "<group>"; };
+		D7C3A50D28D9E8000046D8B0 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D7D19AF227049839008C4259 /* PokemonDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewModel.swift; sourceTree = "<group>"; };
 		D7F9F7D628A5328F005DBFE9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB2EECCDC6ACE7EB0AF47969 /* Pods_Pokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 		D775C10526ECDCC100EBEC66 /* Pokedex */ = {
 			isa = PBXGroup;
 			children = (
+				D7C3A50B28D9E7C20046D8B0 /* Pokedex */,
 				D7F9F7D628A5328F005DBFE9 /* GoogleService-Info.plist */,
 				D775C11426ECDCC500EBEC66 /* Info.plist */,
 				D775C12B26ED929F00EBEC66 /* AppDelegate.swift- */,
@@ -189,7 +192,7 @@
 				D775C12926ED901D00EBEC66 /* View */,
 				D73EA24628D8604700116114 /* NotificationView.swift */,
 				D73EA24828D863B800116114 /* DynamicIslandExampleApp.swift */,
-				D7C3A50928D9E6B50046D8B0 /* ContentView.swift */,
+				D7C3A50D28D9E8000046D8B0 /* ContentView.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D775C11326ECDCC500EBEC66 /* LaunchScreen.storyboard in Resources */,
+				D7C3A50C28D9E7C20046D8B0 /* Pokedex in Resources */,
 				D7F9F7D728A53290005DBFE9 /* GoogleService-Info.plist in Resources */,
 				D775C11026ECDCC500EBEC66 /* Preview Assets.xcassets in Resources */,
 				D775C10D26ECDCC500EBEC66 /* Assets.xcassets in Resources */,
@@ -401,7 +405,7 @@
 			files = (
 				D775C12D26ED929F00EBEC66 /* AppDelegate.swift- in Sources */,
 				D775C12E26ED929F00EBEC66 /* SceneDelegate.swift- in Sources */,
-				D7C3A50A28D9E6B50046D8B0 /* ContentView.swift in Sources */,
+				D7C3A50E28D9E8010046D8B0 /* ContentView.swift in Sources */,
 				D749024C2700B54A00D4A6FD /* PokemonEditView.swift in Sources */,
 				D775C12326ECDF2E00EBEC66 /* PokemonDetailView.swift in Sources */,
 				D775C11F26ECDE9A00EBEC66 /* PokemonRow.swift in Sources */,
