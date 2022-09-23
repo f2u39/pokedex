@@ -2,11 +2,16 @@
 
 Tryna learn Swift.
 
+## Using
+
+- [ ] Firebase
+
 ## Status
 
-- Sep 6, 2022 🔴Stopped
-- Sep 19, 2022 🟢Running
-- Sep 20, 2022 🔴Stopping
+- Sep 16, 2021 ⚪️
+- Sep 26, 2021 🔴
+- Sep 19, 2022 🟢
+- Sep 23, 2022 🔴
 
 ## Memo
 
@@ -31,6 +36,6 @@ Pods > gRPC-C++-gRPCCertificates-Cpp > Team
 Settings > General > VPN & Device Management
 ```
 
-## Reference
+## Reference`
 
 - [Replicating the Dynamic Island Animation in SwiftUI](https://betterprogramming.pub/dynamic-island-animation-5869fbce41e6)
