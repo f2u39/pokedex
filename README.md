@@ -39,6 +39,6 @@ Pods > gRPC-C++-gRPCCertificates-Cpp > Team
 Settings > General > VPN & Device Management
 ```
 
-## Reference
+## References
 
 - [Replicating the Dynamic Island Animation in SwiftUI](https://betterprogramming.pub/dynamic-island-animation-5869fbce41e6)
