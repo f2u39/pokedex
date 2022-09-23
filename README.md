@@ -8,10 +8,13 @@ Tryna learn Swift.
 
 ## Status
 
-- Sep 16, 2021 🟢
-- Sep 26, 2021 🟡
-- Sep 19, 2022 🟢
-- Sep 23, 2022 🔴
+| Date | Status |
+| --- | --- |
+| Sep 16, 2021 | ⚪️ |
+| Sep 16, 2021 | 🟢 |
+| Sep 26, 2021 | 🟡 |
+| Sep 19, 2022 | 🟢 |
+| Sep 20, 2022 | 🔴 |
 
 ## Memo
 
