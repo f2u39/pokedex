@@ -2,10 +2,6 @@
 
 Tryna learn Swift.
 
-## Using
-
-- [ ] Firebase
-
 ## Status
 
 | Date | Status |
